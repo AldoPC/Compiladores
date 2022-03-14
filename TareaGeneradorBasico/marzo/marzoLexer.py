@@ -1,4 +1,4 @@
-# Generated from /Users/aldoponce/8vo/Compiladores/marzo/marzo.g4 by ANTLR 4.9.3
+# Generated from /Users/aldoponce/8vo/Compiladores/TareaGeneradorBasico/marzo/marzo.g4 by ANTLR 4.9.3
 from antlr4 import *
 from io import StringIO
 import sys

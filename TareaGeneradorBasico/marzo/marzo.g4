@@ -1,6 +1,6 @@
 grammar marzo;
 
-program : expression*statement* ;
+program : expression*statement*expression*statement* ;
 expression: 
     expression '+' expression #suma
     | Numero                #primaria
