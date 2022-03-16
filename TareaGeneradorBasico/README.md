@@ -8,14 +8,14 @@
 ### Sirve mejor si cada uno se ejecuta individual
 
 ## Resultados
-![Declaración](./resultados/declarar.png "Declarar")
+![Declaración](./resultados/declarar.png "Declarar")<br/>
 ![Resultado Declaración](./resultados/declararResultado.png "Resultado Declarar")
-
-![Aritmética](./resultados/aritmetica.png "Aritmética")
+---
+![Aritmética](./resultados/aritmetica.png "Aritmética")<br/>
 ![Resultado Aritmética](./resultados/aritmeticaResultado.png "Resultado Aritmética")
-
-![Asignación](./resultados/asignar.png "Asignación")
+---
+![Asignación](./resultados/asignar.png "Asignación")<br/>
 ![Resultado Declaración](./resultados/asignarResultado.png "Resultado Asignación")
-
-![If](./resultados/if.png "If")
+---
+![If](./resultados/if.png "If")<br/>
 ![Resultado If](./resultados/ifResultado.png "Resultado If")
