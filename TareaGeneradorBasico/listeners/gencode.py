@@ -38,6 +38,7 @@ class GenCode(marzoListener):
         if(self.ifCounter > 3 and self.isIf):
             print("ELSE:")
         print("ADD $v" + str((self.var)) +", " + "$v" + str(self.stack.pop()) + ", " + "$v" + str(self.stack.pop()))
+        self.stack.append(self.var)
     
     def exitAsignacion(self, ctx:marzoParser.AsignacionContext):
         if(self.ifCounter > 3):
