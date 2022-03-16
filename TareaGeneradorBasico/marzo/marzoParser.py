@@ -26,11 +26,11 @@ def serializedATN():
         buf.write("\25\24\3\2\2\2\26\31\3\2\2\2\27\25\3\2\2\2\27\30\3\2\2")
         buf.write("\2\30\35\3\2\2\2\31\27\3\2\2\2\32\34\5\6\4\2\33\32\3\2")
         buf.write("\2\2\34\37\3\2\2\2\35\33\3\2\2\2\35\36\3\2\2\2\36\3\3")
-        buf.write("\2\2\2\37\35\3\2\2\2 !\b\3\1\2!$\7\f\2\2\"$\7\r\2\2# ")
+        buf.write("\2\2\2\37\35\3\2\2\2 !\b\3\1\2!$\7\r\2\2\"$\7\f\2\2# ")
         buf.write("\3\2\2\2#\"\3\2\2\2$\63\3\2\2\2%&\f\b\2\2&\'\7\3\2\2\'")
-        buf.write("\62\5\4\3\t()\f\6\2\2)*\7\4\2\2*\62\5\4\3\7+,\f\4\2\2")
-        buf.write(",-\7\5\2\2-\62\5\4\3\5./\f\3\2\2/\60\7\6\2\2\60\62\5\4")
-        buf.write("\3\4\61%\3\2\2\2\61(\3\2\2\2\61+\3\2\2\2\61.\3\2\2\2\62")
+        buf.write("\62\5\4\3\t()\f\7\2\2)*\7\4\2\2*\62\5\4\3\b+,\f\6\2\2")
+        buf.write(",-\7\5\2\2-\62\5\4\3\7./\f\5\2\2/\60\7\6\2\2\60\62\5\4")
+        buf.write("\3\6\61%\3\2\2\2\61(\3\2\2\2\61+\3\2\2\2\61.\3\2\2\2\62")
         buf.write("\65\3\2\2\2\63\61\3\2\2\2\63\64\3\2\2\2\64\5\3\2\2\2\65")
         buf.write("\63\3\2\2\2\66\67\7\7\2\2\678\5\4\3\289\7\b\2\29:\5\6")
         buf.write("\4\2:I\3\2\2\2;<\7\7\2\2<=\5\4\3\2=>\7\b\2\2>?\5\6\4\2")
@@ -377,20 +377,20 @@ class marzoParser ( Parser ):
             self.state = 33
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [marzoParser.Numero]:
-                localctx = marzoParser.PrimariaContext(self, localctx)
+            if token in [marzoParser.Letra]:
+                localctx = marzoParser.SecundariaContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
                 self.state = 31
-                self.match(marzoParser.Numero)
+                self.match(marzoParser.Letra)
                 pass
-            elif token in [marzoParser.Letra]:
-                localctx = marzoParser.SecundariaContext(self, localctx)
+            elif token in [marzoParser.Numero]:
+                localctx = marzoParser.PrimariaContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 32
-                self.match(marzoParser.Letra)
+                self.match(marzoParser.Numero)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -424,39 +424,39 @@ class marzoParser ( Parser ):
                         localctx = marzoParser.AsignacionContext(self, marzoParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
                         self.state = 38
-                        if not self.precpred(self._ctx, 4):
+                        if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
                         self.state = 39
                         self.match(marzoParser.T__1)
                         self.state = 40
-                        self.expression(5)
+                        self.expression(6)
                         pass
 
                     elif la_ == 3:
                         localctx = marzoParser.MenorContext(self, marzoParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
                         self.state = 41
-                        if not self.precpred(self._ctx, 2):
+                        if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
                         self.state = 42
                         self.match(marzoParser.T__2)
                         self.state = 43
-                        self.expression(3)
+                        self.expression(5)
                         pass
 
                     elif la_ == 4:
                         localctx = marzoParser.MayorContext(self, marzoParser.ExpressionContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expression)
                         self.state = 44
-                        if not self.precpred(self._ctx, 1):
+                        if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
                         self.state = 45
                         self.match(marzoParser.T__3)
                         self.state = 46
-                        self.expression(2)
+                        self.expression(4)
                         pass
 
              
@@ -684,15 +684,15 @@ class marzoParser ( Parser ):
          
 
             if predIndex == 1:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 5)
          
 
             if predIndex == 2:
-                return self.precpred(self._ctx, 2)
+                return self.precpred(self._ctx, 4)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 1)
+                return self.precpred(self._ctx, 3)
          
 
 

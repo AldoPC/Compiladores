@@ -3,11 +3,11 @@ grammar marzo;
 program : expression*statement*expression*statement* ;
 expression: 
     expression '+' expression #suma
-    | Numero                #primaria
     | expression '=' expression #asignacion
-    | Letra                 #secundaria
     | expression '<' expression #menor
     | expression '>' expression #mayor
+    | Letra                 #secundaria
+    | Numero                #primaria
     ;
 
 statement:
